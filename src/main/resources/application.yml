@@ -1,0 +1,33 @@
+spring:
+  # Conection mysql
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_dragon_service?useSSL=false&useTimezone=true&serverTimezone=America/Bogota
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  application:
+    name: microservice-auth
+
+
+  zipkin:
+    base-url: http://localhost:9411
+
+server:
+  port: 8084
+
+jwt:
+  secret: secret-auth
+
+# debug sql
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+
+
+
