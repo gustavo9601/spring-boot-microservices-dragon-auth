@@ -1,18 +1,24 @@
 package springbootmicroservicesauthdragon.springbootmicroservicesauthdragon.models.dto;
 
-public class TokenDto {
+import java.io.Serializable;
 
-        private String token;
+public class TokenDto implements Serializable {
 
-        public TokenDto(String token) {
-            this.token = token;
-        }
+    private static final long serialVersionUID = 1L;
+    private String token;
 
-        public String getToken() {
-            return token;
-        }
+    public TokenDto() {
+    }
 
-        public void setToken(String token) {
-            this.token = token;
-        }
+    public TokenDto(String token) {
+        this.token = token;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 }
